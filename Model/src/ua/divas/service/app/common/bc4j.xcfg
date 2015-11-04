@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="ua.divas.service.app.AppModule">
+      <AppModuleConfig name="AppModuleLocal" jbo.project="ua.divas.service.model.Model" ApplicationName="ua.divas.service.app.AppModule" DeployPlatform="LOCAL">
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="ua.divas.service.app.AppModule"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/divasDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="AppModuleShared" jbo.project="ua.divas.service.model.Model" ApplicationName="ua.divas.service.app.AppModule" DeployPlatform="LOCAL">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="ua.divas.service.app.AppModule"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/divasDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="DivasService" jbo.project="ua.divas.service.model.Model" ApplicationName="ua.divas.service.app.AppModule" DeployPlatform="SI">
+         <AM-Pooling jbo.ampool.resetnontransactionalstate="true"/>
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="ua.divas.service.app.AppModule"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/divasDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

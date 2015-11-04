@@ -1,0 +1,32 @@
+<xsd:schema xmlns:sdoJava="commonj.sdo/java" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     targetNamespace="/ua/divas/service/vo/common/" xmlns="/ua/divas/service/vo/common/" elementFormDefault="qualified"
+     sdoJava:package="ua.divas.service.vo.common">
+    <xsd:annotation>
+        <xsd:documentation>
+            <name>Nom Group</name>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:import schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd" namespace="http://xmlns.oracle.com/adf/svc/types/"/>
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:complexType name="NomGroupSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>Id</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Id" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Fullname" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Deleted" type="xsd:int" minOccurs="0" nillable="true"/>
+            <xsd:element name="IsGroup" type="xsd:int" minOccurs="0" nillable="true"/>
+            <xsd:element name="ParentId" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Usluga" type="xsd:int" minOccurs="0" nillable="true"/>
+            <xsd:element name="Predefined" type="xsd:int" minOccurs="0" nillable="true"/>
+            <xsd:element name="Version" type="ns0:dateTime-Timestamp" minOccurs="0" nillable="true"/>
+            <xsd:element name="Artikul" type="xsd:string" minOccurs="0" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="nomGroupSDO" type="NomGroupSDO"/>
+</xsd:schema>

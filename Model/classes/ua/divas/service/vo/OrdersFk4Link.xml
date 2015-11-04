@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="OrdersFk4Link"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  EntityAssociation="ua.divas.service.model.OrdersFk4Assoc">
+  <ViewLinkDefEnd
+    Name="DivisionsView"
+    Cardinality="1"
+    Source="true"
+    Owner="ua.divas.service.vo.DivisionsView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="DivisionsView"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ua.divas.service.vo.DivisionsView.Id"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="OrdersView1"
+    Cardinality="-1"
+    Owner="ua.divas.service.vo.OrdersView">
+    <DesignTime>
+      <Attr Name="_finderName" Value="OrdersView1"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ua.divas.service.vo.OrdersView.DivisionDest"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Divisions"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="DIVISIONS"
+  AliasName="Divisions"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="Id"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DIVISIONS"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Fullname"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="FULLNAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DIVISIONS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Deleted"
+    IsNotNull="true"
+    Precision="1"
+    Scale="0"
+    ColumnName="DELETED"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="DIVISIONS"/>
+  <Attribute
+    Name="IsGroup"
+    IsNotNull="true"
+    Precision="1"
+    Scale="0"
+    ColumnName="IS_GROUP"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="DIVISIONS"/>
+  <Attribute
+    Name="ParentId"
+    Precision="50"
+    ColumnName="PARENT_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DIVISIONS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Version"
+    IsNotNull="true"
+    ColumnName="VERSION"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="DIVISIONS"/>
+  <Attribute
+    Name="Predefined"
+    IsNotNull="true"
+    Precision="1"
+    Scale="0"
+    ColumnName="PREDEFINED"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="DIVISIONS"/>
+  <Attribute
+    Name="MainUser"
+    Precision="50"
+    ColumnName="MAIN_USER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DIVISIONS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Divisions"
+    Association="ua.divas.service.model.DivisionsDivisionsFk1Assoc"
+    AssociationEnd="ua.divas.service.model.DivisionsDivisionsFk1Assoc.Divisions"
+    AssociationOtherEnd="ua.divas.service.model.DivisionsDivisionsFk1Assoc.ParentIdDivisions"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="ParentIdDivisions"
+    Association="ua.divas.service.model.DivisionsDivisionsFk1Assoc"
+    AssociationEnd="ua.divas.service.model.DivisionsDivisionsFk1Assoc.ParentIdDivisions"
+    AssociationOtherEnd="ua.divas.service.model.DivisionsDivisionsFk1Assoc.Divisions"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="DivisionSotr"
+    Association="ua.divas.service.model.DivisionSotrFk1Assoc"
+    AssociationEnd="ua.divas.service.model.DivisionSotrFk1Assoc.DivisionSotr"
+    AssociationOtherEnd="ua.divas.service.model.DivisionSotrFk1Assoc.Divisions"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Kassa"
+    Association="ua.divas.service.model.KassaDivisionsFk1Assoc"
+    AssociationEnd="ua.divas.service.model.KassaDivisionsFk1Assoc.Kassa"
+    AssociationOtherEnd="ua.divas.service.model.KassaDivisionsFk1Assoc.Divisions"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Orders"
+    Association="ua.divas.service.model.OrdersDivisionsFk1Assoc"
+    AssociationEnd="ua.divas.service.model.OrdersDivisionsFk1Assoc.Orders"
+    AssociationOtherEnd="ua.divas.service.model.OrdersDivisionsFk1Assoc.Divisions"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Orders1"
+    Association="ua.divas.service.model.OrdersFk4Assoc"
+    AssociationEnd="ua.divas.service.model.OrdersFk4Assoc.Orders1"
+    AssociationOtherEnd="ua.divas.service.model.OrdersFk4Assoc.Divisions1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Pko"
+    Association="ua.divas.service.model.PkoFk1Assoc"
+    AssociationEnd="ua.divas.service.model.PkoFk1Assoc.Pko"
+    AssociationOtherEnd="ua.divas.service.model.PkoFk1Assoc.Divisions"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Rko"
+    Association="ua.divas.service.model.RkoFk1Assoc"
+    AssociationEnd="ua.divas.service.model.RkoFk1Assoc.Rko"
+    AssociationOtherEnd="ua.divas.service.model.RkoFk1Assoc.Divisions"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Users"
+    Association="ua.divas.service.model.DivisionsFk1Assoc"
+    AssociationEnd="ua.divas.service.model.DivisionsFk1Assoc.Users"
+    AssociationOtherEnd="ua.divas.service.model.DivisionsFk1Assoc.Divisions"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="UserSettings"
+    Association="ua.divas.service.model.UserSettingsDivisionsFk1Assoc"
+    AssociationEnd="ua.divas.service.model.UserSettingsDivisionsFk1Assoc.UserSettings"
+    AssociationOtherEnd="ua.divas.service.model.UserSettingsDivisionsFk1Assoc.Divisions"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="DivisionsPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="DIVISIONS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ua.divas.service.model.Divisions.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="DivisionsDivisionsFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="DIVISIONS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="DIVISIONS_DIVISIONS_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ua.divas.service.model.Divisions.ParentId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="DivisionsFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="USERS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="DIVISIONS_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ua.divas.service.model.Divisions.MainUser"/>
+    </AttrArray>
+  </Key>
+</Entity>

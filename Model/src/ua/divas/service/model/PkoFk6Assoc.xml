@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PkoFk6Assoc"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="OperationPko"
+    Cardinality="1"
+    Source="true"
+    Owner="ua.divas.service.model.OperationPko">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="OperationPko"/>
+      <Attr Name="_foreignKey" Value="ua.divas.service.model.OperationPko.OperationPkoPk"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ua.divas.service.model.OperationPko.Id"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="Pko"
+    Cardinality="-1"
+    Owner="ua.divas.service.model.Pko">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Pko"/>
+      <Attr Name="_foreignKey" Value="ua.divas.service.model.Pko.PkoFk6"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ua.divas.service.model.Pko.OperationId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

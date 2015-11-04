@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="DivisionSotrView"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  SelectList="DivisionSotr.ID, 
+       DivisionSotr.DIV_ID, 
+       DivisionSotr.USER_ID, 
+       DivisionSotr.DESCRIPTION"
+  FromList="DIVISION_SOTR DivisionSotr"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SdoGen="true"
+  SdoName="ua.divas.service.vo.common.DivisionSotrViewSDO"
+  SdoNameSpace="/ua/divas/service/vo/common/">
+  <EntityUsage
+    Name="DivisionSotr"
+    Entity="ua.divas.service.model.DivisionSotr"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="DivisionSotr"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="DivId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="DivId"
+    EntityUsage="DivisionSotr"
+    AliasName="DIV_ID"/>
+  <ViewAttribute
+    Name="UserId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="UserId"
+    EntityUsage="DivisionSotr"
+    AliasName="USER_ID"/>
+  <ViewAttribute
+    Name="Description"
+    PrecisionRule="true"
+    EntityAttrName="Description"
+    EntityUsage="DivisionSotr"
+    AliasName="DESCRIPTION"/>
+</ViewObject>

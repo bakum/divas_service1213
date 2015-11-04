@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="OperationPkoView"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  SelectList="OperationPko.ID, 
+       OperationPko.NAME, 
+       OperationPko.FULLNAME"
+  FromList="OPERATION_PKO OperationPko"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SdoGen="true"
+  SdoName="ua.divas.service.vo.common.OperationPkoViewSDO"
+  SdoNameSpace="/ua/divas/service/vo/common/">
+  <EntityUsage
+    Name="OperationPko"
+    Entity="ua.divas.service.model.OperationPko"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="OperationPko"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="Name"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="OperationPko"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="Fullname"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Fullname"
+    EntityUsage="OperationPko"
+    AliasName="FULLNAME"/>
+  <ViewLinkAccessor
+    Name="PkoView"
+    ViewLink="ua.divas.service.vo.PkoFk6Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

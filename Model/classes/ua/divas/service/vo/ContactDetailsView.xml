@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ContactDetailsView"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  SelectList="ContactDetails.ID, 
+       ContactDetails.VERSION, 
+       ContactDetails.KONTRAG_ID, 
+       ContactDetails.ADRESS, 
+       ContactDetails.PHONE, 
+       ContactDetails.EMAIL"
+  FromList="CONTACT_DETAILS ContactDetails"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SdoGen="true"
+  SdoName="ua.divas.service.vo.common.ContactDetailsViewSDO"
+  SdoNameSpace="/ua/divas/service/vo/common/">
+  <EntityUsage
+    Name="ContactDetails"
+    Entity="ua.divas.service.model.ContactDetails"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="ContactDetails"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="Version"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Version"
+    EntityUsage="ContactDetails"
+    AliasName="VERSION"/>
+  <ViewAttribute
+    Name="KontragId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="KontragId"
+    EntityUsage="ContactDetails"
+    AliasName="KONTRAG_ID"/>
+  <ViewAttribute
+    Name="Adress"
+    PrecisionRule="true"
+    EntityAttrName="Adress"
+    EntityUsage="ContactDetails"
+    AliasName="ADRESS"/>
+  <ViewAttribute
+    Name="Phone"
+    PrecisionRule="true"
+    EntityAttrName="Phone"
+    EntityUsage="ContactDetails"
+    AliasName="PHONE"/>
+  <ViewAttribute
+    Name="Email"
+    PrecisionRule="true"
+    EntityAttrName="Email"
+    EntityUsage="ContactDetails"
+    AliasName="EMAIL"/>
+</ViewObject>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="LastPricesView"
+  Version="12.1.2.66.68"
+  InheritPersonalization="merge"
+  SelectList="LastPrices.ID, 
+       LastPrices.NOM_ID, 
+       LastPrices.PERIOD, 
+       LastPrices.ED_IZM, 
+       LastPrices.PRICE_USL, 
+       LastPrices.PRICE_GOODS"
+  FromList="LAST_PRICES LastPrices"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SdoGen="true"
+  SdoName="ua.divas.service.vo.common.LastPricesViewSDO"
+  SdoNameSpace="/ua/divas/service/vo/common/">
+  <EntityUsage
+    Name="LastPrices"
+    Entity="ua.divas.service.model.LastPrices"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="LastPrices"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="NomId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="NomId"
+    EntityUsage="LastPrices"
+    AliasName="NOM_ID"/>
+  <ViewAttribute
+    Name="Period"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Period"
+    EntityUsage="LastPrices"
+    AliasName="PERIOD"/>
+  <ViewAttribute
+    Name="EdIzm"
+    PrecisionRule="true"
+    EntityAttrName="EdIzm"
+    EntityUsage="LastPrices"
+    AliasName="ED_IZM"/>
+  <ViewAttribute
+    Name="PriceUsl"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="PriceUsl"
+    EntityUsage="LastPrices"
+    AliasName="PRICE_USL"/>
+  <ViewAttribute
+    Name="PriceGoods"
+    PrecisionRule="true"
+    EntityAttrName="PriceGoods"
+    EntityUsage="LastPrices"
+    AliasName="PRICE_GOODS"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Id"/>
+  </AttrArray>
+</ViewObject>

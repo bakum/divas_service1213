@@ -1,0 +1,41 @@
+<xsd:schema xmlns:sdoJava="commonj.sdo/java" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:sdoXML="commonj.sdo/xml" targetNamespace="/ua/divas/service/vo/common/" xmlns="/ua/divas/service/vo/common/"
+     elementFormDefault="qualified" sdoJava:package="ua.divas.service.vo.common">
+    <xsd:import schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd" namespace="http://xmlns.oracle.com/adf/svc/types/"/>
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:import schemaLocation="classpath:/xml/sdoXML.xsd" namespace="commonj.sdo/xml"/>
+    <xsd:include schemaLocation="DivisionSotrViewSDO.xsd"/>
+    <xsd:include schemaLocation="KassaViewSDO.xsd"/>
+    <xsd:include schemaLocation="OrdersViewSDO.xsd"/>
+    <xsd:include schemaLocation="PkoViewSDO.xsd"/>
+    <xsd:include schemaLocation="RkoViewSDO.xsd"/>
+    <xsd:include schemaLocation="UserSettingsViewSDO.xsd"/>
+    <xsd:complexType name="DivisionsViewSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>Id</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Id" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="Fullname" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="Deleted" type="xsd:int" minOccurs="0" sdoXML:dataType="sdoJava:IntObject"/>
+            <xsd:element name="IsGroup" type="xsd:int" minOccurs="0" sdoXML:dataType="sdoJava:IntObject"/>
+            <xsd:element name="ParentId" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Version" type="ns0:dateTime-Timestamp" minOccurs="0"/>
+            <xsd:element name="Predefined" type="xsd:int" minOccurs="0" sdoXML:dataType="sdoJava:IntObject"/>
+            <xsd:element name="MainUser" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="DivisionsView" type="DivisionsViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="DivisionSotrView" type="DivisionSotrViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="KassaView" type="KassaViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="OrdersView" type="OrdersViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="OrdersView1" type="OrdersViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="PkoView" type="PkoViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="RkoView" type="RkoViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="UserSettingsView" type="UserSettingsViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="divisionsViewSDO" type="DivisionsViewSDO"/>
+</xsd:schema>

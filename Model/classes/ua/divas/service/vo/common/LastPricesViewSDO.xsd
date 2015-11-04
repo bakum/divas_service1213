@@ -1,0 +1,24 @@
+<xsd:schema xmlns:sdoJava="commonj.sdo/java" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     targetNamespace="/ua/divas/service/vo/common/" xmlns="/ua/divas/service/vo/common/" elementFormDefault="qualified"
+     sdoJava:package="ua.divas.service.vo.common">
+    <xsd:import schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd" namespace="http://xmlns.oracle.com/adf/svc/types/"/>
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:complexType name="LastPricesViewSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>Id</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Id" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="NomId" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="Period" type="ns0:dateTime-Timestamp" minOccurs="0"/>
+            <xsd:element name="EdIzm" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="PriceUsl" type="xsd:decimal" minOccurs="0"/>
+            <xsd:element name="PriceGoods" type="xsd:decimal" minOccurs="0" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="lastPricesViewSDO" type="LastPricesViewSDO"/>
+</xsd:schema>

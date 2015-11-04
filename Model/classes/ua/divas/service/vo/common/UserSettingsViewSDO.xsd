@@ -1,0 +1,27 @@
+<xsd:schema xmlns:sdoJava="commonj.sdo/java" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="/ua/divas/service/vo/common/"
+     xmlns="/ua/divas/service/vo/common/" elementFormDefault="qualified" sdoJava:package="ua.divas.service.vo.common">
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:complexType name="UserSettingsViewSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>Id</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Id" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="UserId" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="DivisionId" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="FirmaId" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="CurrencyId" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="KassaId" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="MainUsluga" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="ActivitiesId" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="ZamerkontragId" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="KontragId" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="NetId" type="xsd:string" minOccurs="0" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="userSettingsViewSDO" type="UserSettingsViewSDO"/>
+</xsd:schema>
